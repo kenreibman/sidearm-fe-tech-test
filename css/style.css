@@ -119,6 +119,9 @@ body {
     padding: 2.4rem;
     box-shadow: inset 4px 0px 0px #000000;
 }
+.nav__item::after {
+    
+}
 
 .hamburger-menu {
     display: block;
