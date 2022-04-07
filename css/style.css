@@ -291,11 +291,17 @@ body {
 
     .nav {
         display: block;
+        position: initial;
+        left: unset;
+        right: unset;
+        top: unset;
     }
 
     .primary-nav {
         height: 100%;
         justify-content: space-around;
+        flex-direction: row;
+        background-color: transparent;
     }
 
     .nav__item {
@@ -305,6 +311,7 @@ body {
         padding: 2.25rem 2.4rem;
         cursor: pointer;
         transition: all 0.3s ease;
+        box-shadow: none;
     }
     .nav__item:hover {
         background-color: var(--bg-color);
