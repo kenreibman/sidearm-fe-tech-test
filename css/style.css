@@ -13,6 +13,7 @@
     --text-color: #262628;
     --white: #fff;
     --bg-color: #F9F9F9;
+    --hover-card-dark: #F1F1F1;
 
     /* FONT SIZE */
     /* Clamp Calculator: https://grizhlie-clamp-calculator.netlify.app/ */
@@ -33,6 +34,7 @@
     --fw-regular: 400;
 
     --mobile-nav-height: 12rem;
+    --desktop-nav-height: 7.2rem;
 
 }
 
@@ -68,6 +70,22 @@ body {
     color: var(--white);
 }
 
+.show-card {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .show-card {
+        display: grid;
+    }
+}
+.show-card-desktop {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .show-card-desktop {
+        display: grid;
+    }
+}
 /*=============== HEADER & NAV ===============*/
 
 .header {
@@ -81,7 +99,12 @@ body {
 .nav__logo {
 }
 
+.nav {
+    display: none;
+}
+
 .hamburger-menu {
+    display: block;
     font-size: 4.4rem;
     color: var(--white);
     cursor: pointer;
@@ -121,7 +144,6 @@ body {
 
 .button {
     width: 20.5rem;
-    height: 7.5rem;
     background-color: var(--white);
     border: 1px solid var(--primary-color);
     padding: 2.25rem 2.4rem;
@@ -150,7 +172,9 @@ body {
     background-color: var(--white);
     padding: 2.4rem;
     gap: 2.4rem;
+    grid-template-columns: 1fr;
 }
+
 .showcase__header {
     padding: 0.8rem;
     justify-content: space-between;
@@ -186,16 +210,109 @@ body {
 }
 
 .card__button {
-    width: 20rem;
-    height: 6rem;
-    padding: 1.6rem 0rem;
+    padding: 1.6rem 2.4rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* TABLET */
 @media screen and (min-width: 768px) {
+    
+
+    /* HOME */
     .home__buttons {
         flex-direction: row;
+    }
+
+    /* SHOWCASE */
+    .span{
+        grid-column: span 3;
+    }
+
+    .showcase__container {
+        margin: 2.4rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        padding: 0rem;
+    }
+
+    .card__img {
+        padding: 2.4rem 2.4rem 0;
+    }
+
+    .card__description {
+        margin-left: 4.8rem;
+        margin-right: 4.8rem;
+    }
+    
+    .card__button {
+        margin-bottom: 4.8rem;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .header {
+        height: var(--desktop-nav-height);
+        background-color: var(--white);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .span {
+        grid-column: span 4;
+    }
+    .showcase__container {
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+        transition: all 0.4s ease;
+    }
+    .card__button {
+        transition: all 0.3s ease;
+    }
+/* HOVER STATES */
+    .card:hover {
+        background-color: var(--hover-card-dark);
+    }
+
+    .card__button:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .home__container {
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .home__title {
+        grid-column: span 3;
+        text-align: center;
+    }
+
+    .home__subtitle {
+        margin: 0;
+    }
+
+    .home__buttons {
+        grid-column: 3 / 4;
     }
 }
