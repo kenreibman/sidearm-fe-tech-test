@@ -16,7 +16,7 @@
 
     /* FONT SIZE */
     /* Clamp Calculator: https://grizhlie-clamp-calculator.netlify.app/ */
-    --fs-title: clamp(3rem, 2.3662rem + 1.6901vw, 4.8rem);
+    --fs-title: clamp(3rem, 1.2824rem + 4.5802vw, 4.8rem);
     --fs-paragraph: 1.6rem;
 
     --fs-header-lg: 3rem;
@@ -191,4 +191,11 @@ body {
     padding: 1.6rem 0rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    .home__buttons {
+        flex-direction: row;
+    }
 }
