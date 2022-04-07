@@ -1,5 +1,7 @@
 # Front-End Developer Tech Test: Pipeline
 
+[LIVE SITE](https://kenreibman.github.io/sidearm-fe-tech-test/)
+
 Thank you for your interest in the Front-End Developer position at SIDEARM Sports!
 
 One of the main responsibilities of the Front-End Developer on the pipeline team is to take a design from one of our many talented designers and bring it to life with your code.  Our designers will provide you with high-fidelity mockups in [Figma](https://www.figma.com/) broken down for desktop, tablet, and mobile. You would then be responsible for integrating the site using semantic HTML, LESS, and KnockoutJS. Fear not, we are transitioning to a more modern approach (SCSS, Vue).
