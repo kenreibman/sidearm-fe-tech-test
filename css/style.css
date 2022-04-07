@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
-/* VARIABLES */
+/*=============== VARIABLES ===============*/
 :root {
+    /* FONT-SIZE RESET || 1rem = 10px => i.e 100px = 10rem */
+    font-size: 62.5%;
+
     /* FONT FAMILY  */
     --ff-main: 'Montserrat', sans-serif;
 
     /* COLORS */
     --primary-color: #003057;
     --text-color: #262628;
+    --white: #fff;
+    --bg-color: #F9F9F9;
 
     /* FONT SIZE */
     --fs-title: clamp(3rem, 2.3662rem + 1.6901vw, 4.8rem);
@@ -22,14 +27,92 @@
     --fs-btn-sm: 1.4rem;
 
     /* FONT WEIGHT */
-    --fw-very-bold: 900;
+    --fw-extra-bold: 900;
     --fw-bold: 700;
     --fw-regular: 400;
 
-    /* FONT-SIZE RESET || 1rem = 10px => i.e 100px = 10rem */
-    font-size: 62.5%;
+    --mobile-nav-height: 12rem;
 }
 
 body {
     font-family : var(--ff-main);
+    background-color: var(--bg-color);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container {
+    max-width: 144rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.extra-bold{
+    font-weight: var(--fw-extra-bold);
+}
+.white {
+    color: var(--white);
+}
+
+/*=============== HEADER & NAV ===============*/
+
+.header {
+    background-color: var(--primary-color);
+    height: var(--mobile-nav-height);
+    justify-content: space-between;
+    padding: 2.4rem;
+    align-items: center;
+}
+
+.nav__logo {
+}
+
+.hamburger-menu {
+    font-size: 4.4rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/*=============== HOME SECTION ===============*/
+.home__title {
+    font-size: var(--fs-title);
+    color: var(--primary-color);
+    font-weight: var(--fw-regular);
+}
+
+.home__subtitle {
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-bold);
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+}
+
+.home__buttons {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.button {
+    width: 20.5rem;
+    height: 7.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+    padding: 2.4rem;
+    color: var(--primary-color);
+    font-size: var(--fs-btn-lg);
+    font-weight: var(--fw-bold);
 }

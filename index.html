@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 
-    <script src="js/site.js" defer></script>
+    <!--=============== FONTAWESOME ===============-->
     <script src="https://kit.fontawesome.com/4ca71be942.js" crossorigin="anonymous"></script>
 
     <title>Candidate Mock</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="" alt="" class="logo__img">
-        </div>
+    <!--=============== HEADER ===============-->
+    <header class="header flex" id="header">
 
-        <nav>
+        <picture class="nav__logo">
+            <source media="(min-width:1024px)" srcset="assets/logo-large.png">
+            <img src="assets/logo-small.png" alt="LOREM IPSUM" class="logo__img">
+        </picture>
+
+        <!-- <nav class="nav container">
             <ul class="primary-nav" role="list">
                 <li class="nav__item">
                     <a href="#">Ipsum</a>
@@ -37,7 +40,51 @@
                     <a href="#">Ipsum</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
+
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section">
+            <h1 class="home__title section__title">Proident anim <span class="extra-bold">nor nulla iste.</span></h1>
+            <p class="home__subtitle section__subtitle">Minim modi yet omnis nor quia so minima.</p>
+
+            <div class="home__buttons flex">
+
+                <a href="#" class="button button--dark flex">
+
+                    <div class="icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span class="link__text">Ipsum Lorem</span>
+
+                </a>
+                <a href="#" class="button flex">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                    <span class="link__text">Ipsum Lorem</span>
+                    
+                </a>
+                <a href="#" class="button flex">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="link__text">Ipsum Lorem</span>
+                    
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/site.js"></script>
 </body>
 </html>
