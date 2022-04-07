@@ -101,7 +101,23 @@ body {
 }
 
 .nav {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12rem;
+}
+
+.primary-nav {
+    flex-direction: column;
+    background-color: var(--hover-card-dark);
+}
+
+.nav__item {
+    font-size: var(--fs-btn-lg);
+    font-weight: var(--fw-bold);
+    padding: 2.4rem;
+    box-shadow: inset 4px 0px 0px #000000;
 }
 
 .hamburger-menu {
@@ -109,6 +125,10 @@ body {
     font-size: 4.4rem;
     color: var(--white);
     cursor: pointer;
+}
+
+.show {
+    display: block;
 }
 
 /*=============== HOME SECTION ===============*/
@@ -275,10 +295,6 @@ body {
         justify-content: space-around;
     }
 
-    .nav__item a {
-        color: unset;
-    }
-
     .nav__item {
         font-size: var(--fs-btn-lg);
         font-weight: var(--fw-bold);
@@ -295,8 +311,8 @@ body {
 
     .nav__link {
         text-decoration: none;
+        color: var(--nav-text-color);
     }
-
  
     .hamburger-menu {
         display: none;
