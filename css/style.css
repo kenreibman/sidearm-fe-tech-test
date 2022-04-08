@@ -119,6 +119,7 @@ body {
     font-weight: var(--fw-bold);
     box-shadow: inset 4px 0px 0px #000000;
     grid-template-columns: 1fr;
+    cursor: pointer;
 }
 
 .nav__item:is(.active) .nav__link::after {
@@ -156,7 +157,6 @@ body {
     font-size: var(--fs-header-xs);
     font-weight: var(--fw-bold);
     padding: 0.8rem 2.4rem;
-    box-shadow: inset 0px 1px 0px var(--hover-card-dark);
 }
 
 .dropdown__item {
@@ -387,7 +387,6 @@ body {
     }
     .nav__item:hover {
         background-color: var(--bg-color);
-        color: var(--primary-color);
         box-shadow: inset 0px -4px 0px var(--primary-color);
     }
 
@@ -406,10 +405,17 @@ body {
     left: 0;
     right: 0;
     top: 7.2rem;
-    display: flex;
-    max-height: 0;
-    padding-left: 24rem;
-    background-color: gray;
+    background-color: var(--bg-color);
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+    }
+
+    .dropdown__title {
+        padding: 0;
+    }
+
+    .dropdown__item {
+        box-shadow: inset 0px -1px 0px #F1F1F1;
     }
  
     .hamburger-menu {

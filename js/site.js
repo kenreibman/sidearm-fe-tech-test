@@ -20,7 +20,7 @@ items.forEach((item) => {
       itemDetail.style.maxHeight = null;
     } else {
       const scrollHeight = itemDetail.scrollHeight;
-      itemDetail.style.maxHeight = `${scrollHeight}px`;
+      itemDetail.style.maxHeight = `${scrollHeight}rem`;
     }
   });
 });
