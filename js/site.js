@@ -1,9 +1,6 @@
 const hamburgerMenu = document.querySelector('#hamburgerMenu');
 const nav = document.querySelector('.nav');
 
-const navItem = document.querySelectorAll('.nav__item');
-const dropDown = document.querySelector('.dropdown__nav');
-
 hamburgerMenu.addEventListener('click', () => {
   nav.classList.toggle('show');
 
@@ -11,9 +8,19 @@ hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('animate');
 });
 
-// loop through all navItem and add event listener to each
-for (let i = 0; i < navItem.length; i++) {
-  navItem[i].addEventListener('click', () => {
-    dropDown.classList.toggle('show');
+const items = [...document.querySelectorAll('li.nav__item')];
+
+items.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const clickedItem = e.target.closest('li');
+    const itemDetail = clickedItem.querySelector('.dropdown__nav');
+    const clickedItemActive = clickedItem.classList.contains('active');
+    clickedItem.classList.toggle('active');
+    if (clickedItemActive) {
+      itemDetail.style.maxHeight = null;
+    } else {
+      const scrollHeight = itemDetail.scrollHeight;
+      itemDetail.style.maxHeight = `${scrollHeight}px`;
+    }
   });
-}
+});
