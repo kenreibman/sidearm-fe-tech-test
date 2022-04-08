@@ -119,11 +119,11 @@ body {
     font-weight: var(--fw-bold);
     box-shadow: inset 4px 0px 0px #000000;
     grid-template-columns: 1fr;
-    cursor: pointer;
 }
 
 .nav__item:is(.active) .nav__link::after {
     transform: rotate(180deg);
+    transition: all 0.3s ease;
 }
 
 .nav__link {
@@ -285,7 +285,6 @@ body {
     color: var(--primary-color);
     font-size: var(--fs-btn-md);
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .card {
@@ -406,8 +405,12 @@ body {
     right: 0;
     top: 7.2rem;
     background-color: var(--bg-color);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;
+    }
+
+    .dropdown__section {
+        padding: 2.4rem;
     }
 
     .dropdown__title {
@@ -416,6 +419,10 @@ body {
 
     .dropdown__item {
         box-shadow: inset 0px -1px 0px #F1F1F1;
+    }
+    .dropdown__item:hover {
+        background-color: var(--hover-card-dark);
+        text-decoration: underline;
     }
  
     .hamburger-menu {
@@ -448,7 +455,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
     .home__container {
         margin-left: auto;
         margin-right: auto;

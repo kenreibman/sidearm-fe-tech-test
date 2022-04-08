@@ -8,6 +8,17 @@ hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('animate');
 });
 
+/*
+const items = document.querySelectorAll('li.nav__item');
+{
+  for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+    });
+  }
+}
+*/
+
 const items = [...document.querySelectorAll('li.nav__item')];
 
 items.forEach((item) => {
