@@ -24,6 +24,7 @@
     --fs-header-lg: 3rem;
     --fs-header-md: 2.4rem;
     --fs-header-sm: 1.8rem;
+    --fs-header-xs: 1.6rem;
 
     --fs-btn-lg: 1.8rem;
     --fs-btn-md: 1.6rem;
@@ -113,19 +114,57 @@ body {
     background-color: var(--hover-card-dark);
 }
 
-.nav__link {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
 .nav__item {
     font-size: var(--fs-btn-lg);
     font-weight: var(--fw-bold);
     padding: 2.4rem;
     box-shadow: inset 4px 0px 0px #000000;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .nav__item::after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    
+    border-top: 8px solid var(--primary-color);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.dropdown__nav {
+    display: none;
+    background-color: var(--white);
+}
+
+.dropdown__title {
+    font-size: var(--fs-header-xs);
+    font-weight: var(--fw-bold);
+    padding: 0.8rem 2.4rem;
+    box-shadow: inset 0px 1px 0px var(--hover-card-dark);
+}
+
+.dropdown__item {
+    box-shadow: inset 0px 1px 0px var(--hover-card-dark);
+    padding: 0.8rem 2.4rem;
+}
+
+.dropdown__link {
+    font-size: var(--fs-header-xs);
+    font-weight: var(--fw-regular);
+    text-decoration: none;
+    color: var(--nav-text-color);
 }
 
 .hamburger-menu {
@@ -133,6 +172,29 @@ body {
     font-size: 4.4rem;
     color: var(--white);
     cursor: pointer;
+}
+
+.line {
+    width: 3.841rem;
+    height: 0.641rem;
+    background-color: var(--white);
+    margin: .64rem;
+    transition: all 0.3s ease;
+    border-radius: 0.2rem;
+}
+
+.animate .line1 {
+    transform: rotate(-45deg) translate(-10px, 8px);
+    width: 4rem;
+    height: 1rem;
+}
+.animate .line2 {
+    opacity: 0;
+}
+.animate .line3 {
+    transform: rotate(45deg) translate(-12px, -12px);
+    width: 4rem;
+    height: 1rem;
 }
 
 .show {
@@ -321,6 +383,9 @@ body {
         background-color: var(--bg-color);
         color: var(--primary-color);
         box-shadow: inset 0px -4px 0px var(--primary-color);
+    }
+    .nav__item::after {
+        display: none;
     }
 
     .nav__link {
