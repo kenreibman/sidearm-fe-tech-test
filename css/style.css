@@ -98,9 +98,6 @@ body {
     align-items: center;
 }
 
-.nav__logo {
-}
-
 .nav {
     display: none;
     position: absolute;
@@ -291,10 +288,6 @@ body {
     background-color: var(--bg-color);
     padding: 2.4rem;
     gap: 2.4rem;
-}
-
-.card__img {
-
 }
 
 .card__description {
