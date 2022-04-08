@@ -101,7 +101,7 @@ body {
 }
 
 .nav {
-    display: block;
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -113,14 +113,19 @@ body {
     background-color: var(--hover-card-dark);
 }
 
+.nav__link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 .nav__item {
     font-size: var(--fs-btn-lg);
     font-weight: var(--fw-bold);
     padding: 2.4rem;
     box-shadow: inset 4px 0px 0px #000000;
+    cursor: pointer;
 }
 .nav__item::after {
-    
 }
 
 .hamburger-menu {
@@ -309,7 +314,6 @@ body {
         font-weight: var(--fw-bold);
         height: 100%;
         padding: 2.25rem 2.4rem;
-        cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: none;
     }
