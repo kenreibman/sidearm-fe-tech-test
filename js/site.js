@@ -1,3 +1,5 @@
+// Hamburger Mobile Button
+
 const hamburgerMenu = document.querySelector('#hamburgerMenu');
 const nav = document.querySelector('.nav');
 
@@ -8,7 +10,7 @@ hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('animate');
 });
 
-/*
+/* Old Code
 const items = document.querySelectorAll('li.nav__item');
 {
   for (let i = 0; i < items.length; i++) {
@@ -19,6 +21,7 @@ const items = document.querySelectorAll('li.nav__item');
 }
 */
 
+// Navbar
 const items = [...document.querySelectorAll('li.nav__item')];
 
 items.forEach((item) => {
