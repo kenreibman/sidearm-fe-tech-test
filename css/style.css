@@ -168,6 +168,7 @@ body {
     color: var(--nav-text-color);
 }
 
+/* HAMBURGER MENU + STYLING */
 .hamburger-menu {
     display: block;
     font-size: 4.4rem;
@@ -197,6 +198,8 @@ body {
     width: 4rem;
     height: 1rem;
 }
+
+/* ACTIVE / SHOW CLASSES */
 
 .show {
     display: block;

@@ -10,6 +10,8 @@ hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('animate');
 });
 
+// Navbar
+
 /* Old Code
 const items = document.querySelectorAll('li.nav__item');
 {
@@ -21,7 +23,6 @@ const items = document.querySelectorAll('li.nav__item');
 }
 */
 
-// Navbar
 const items = [...document.querySelectorAll('li.nav__item')];
 
 items.forEach((item) => {
