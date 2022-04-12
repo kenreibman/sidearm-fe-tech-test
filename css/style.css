@@ -193,7 +193,7 @@ body {
     opacity: 0;
 }
 .animate .line3 {
-    transform: rotate(45deg) translate(-12px, -12px);
+    transform: rotate(45deg) translate(-12px, -11px);
     width: 4rem;
     height: 1rem;
 }
